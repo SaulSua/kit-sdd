@@ -9,10 +9,22 @@
 - Sistema: <qué sistema es, en una línea>
 - Quién aprueba los requerimientos: <nombre o rol>
 
-## Idioma y tono
+## Idioma y cómo reporta el agente
 
 - Idioma de los documentos: español.
 - Trato: usted.
+- Lenguaje simple y corto: una respuesta de avance, menos de 200 palabras.
+- Nombre primero, ID al lado: «falta el mensaje de rechazo (CA-3)», no «CA-3 incompleto».
+
+## Orden de autoridad
+
+Si dos documentos chocan, manda el de más arriba:
+
+1. `docs/constitucion.md`
+2. Este archivo
+3. El requerimiento aprobado de la funcionalidad
+4. La evidencia
+5. Lo que se dijo en el chat (lo que importa se pasa a un archivo)
 
 ## Requerimientos
 

@@ -37,8 +37,10 @@ En la raíz de su repositorio:
 | Paso | Comando | Qué deja |
 |---|---|---|
 | Una vez por repositorio | `/sdd:iniciar` | `docs/kit/` (reglas y plantillas del equipo) y `docs/specs/` |
-| 1. Explorar | `/sdd:explorar <funcionalidad>` | `docs/specs/<funcionalidad>/evidencia.md` |
-| 2. Requerimiento | `/sdd:requerimiento <funcionalidad>` | `docs/specs/<funcionalidad>/requerimiento.md`, revisado por un agente y listo para que lo apruebe una persona |
+| 1. Explorar | `/sdd:explorar <funcionalidad>` | `docs/specs/001-<funcionalidad>/evidencia.md` |
+| 2. Requerimiento | `/sdd:requerimiento <funcionalidad>` | `docs/specs/001-<funcionalidad>/requerimiento.md`, revisado por un agente y listo para que lo apruebe una persona |
+
+Una funcionalidad, una carpeta numerada. Si la carpeta ya existe, el kit la reutiliza.
 
 ## Cómo está hecho
 
@@ -54,6 +56,18 @@ Cada paso del método tiene dos piezas:
 | `explorador` | agente | Lee el código heredado y documenta reglas escondidas, riesgos y preguntas para negocio |
 | `requerimiento` | skill | Entrevista una pregunta a la vez y redacta el requerimiento |
 | `revisor-requerimiento` | agente | Comprueba que cada criterio se pueda verificar y que no haya reglas sin decidir ni datos reales |
+
+## Reglas de diseño del kit
+
+Valen para cada skill y cada agente, los de hoy y los que vienen:
+
+- **Lee primero, con orden de autoridad.** Cada pieza dice qué archivos lee y cuál manda si chocan: constitución, reglas del equipo, documento aprobado del paso anterior, evidencia, chat.
+- **Se trabaja desde archivos, no desde la memoria del chat.** Cada paso empieza leyendo lo que dejó el anterior.
+- **Puerta de entrada.** Un paso no empieza si el anterior no está aprobado por una persona (desde el diseño en adelante).
+- **Regla de rebote.** Si falta una decisión, se vuelve al paso anterior o queda como `[POR DEFINIR]`. Nunca se inventa.
+- **Terminado cuando.** Cada skill termina con su lista de comprobación.
+- **Un solo método de revisión.** Todo revisor dice qué revisó, no se deja convencer por lo prolijo, marca cada hallazgo como confirmado o posible con cómo verificarlo, y nunca corrige: devuelve.
+- **Reporta simple.** Corto, nombre primero e ID al lado.
 
 ## Personalizar
 
@@ -73,13 +87,13 @@ Cada agente trae sus casos en `casos/`, incluido un **caso trampa**: un document
 | Versión | Sesión | Suma |
 |---|---|---|
 | 0.3 | 3 · Especificar | explorar, requerimiento y sus agentes |
-| 0.4 | 4 · Control y datos | guardián de datos (hook) y revisor de política |
-| 0.5 | 5 · Diseño técnico | diseño, arquitecto y revisor de diseño |
-| 0.6 | 6 · Tareas y aprobación | tareas y revisor de coherencia |
+| 0.4 | 4 · Control y datos | reglas del repositorio por carpeta (backend, frontend, pruebas, datos) propuestas por un agente que lee su código; guardián de datos (hook) y revisor de política |
+| 0.5 | 5 · Diseño técnico | diseño, arquitecto y revisor de diseño; la constitución como puerta del diseño |
+| 0.6 | 6 · Tareas y aprobación | tareas, estado de la funcionalidad y revisor de coherencia |
 | 0.7 | 7 · Implementar | implementar con TDD y revisor de desvíos |
 | 0.8 | 8 · QA con IA | pruebas desde criterios y auditor de pruebas débiles |
 | 0.9 | 9 · Seguridad | revisor de seguridad |
-| 1.0 | 10 · Escalar | el flujo completo encadenado |
+| 1.0 | 10 · Escalar | el flujo completo encadenado, memoria de lecciones del equipo y atajo para trabajos chicos |
 
 ## Reglas que valen siempre
 
@@ -89,4 +103,4 @@ Cada agente trae sus casos en `casos/`, incluido un **caso trampa**: un document
 
 ## Inspiración
 
-Este kit adapta ideas de proyectos abiertos: la constitución y el revisor de coherencia de [Spec Kit](https://github.com/github/spec-kit) (GitHub), la cadena requerimiento, diseño y tareas de [cc-sdd](https://github.com/gotalab/cc-sdd) (formato Kiro), los agentes de un solo propósito del plugin [feature-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) (Anthropic) y la disciplina de pruebas de [superpowers](https://github.com/obra/superpowers). Los textos son propios, en español.
+Este kit adapta ideas de proyectos abiertos y de fábricas de software con agentes en producción: la constitución, la constitución como puerta y el revisor de coherencia de [Spec Kit](https://github.com/github/spec-kit) (GitHub), la cadena requerimiento, diseño y tareas de [cc-sdd](https://github.com/gotalab/cc-sdd) (formato Kiro), los agentes de un solo propósito del plugin [feature-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) (Anthropic) y la disciplina de pruebas de [superpowers](https://github.com/obra/superpowers). Los textos son propios, en español.

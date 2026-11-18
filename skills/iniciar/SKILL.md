@@ -14,7 +14,7 @@ El kit trae instrucciones genéricas. Lo que es de **su equipo** (reglas, planti
    - `docs/kit/reglas.md` a partir de `reglas.md` de la carpeta de este skill;
    - `docs/kit/plantillas/requerimiento.md`, copia de `../requerimiento/plantilla.md`;
    - `docs/kit/plantillas/evidencia.md`, copia de `../explorar/plantilla.md`;
-   - la carpeta `docs/specs/` con un `README.md` de una línea: «Una carpeta por funcionalidad: evidencia, requerimiento, diseño y tareas.»
+   - la carpeta `docs/specs/` con un `README.md` de dos líneas: «Una carpeta por funcionalidad, numerada: `001-nombre/`, `002-nombre/`. Adentro: evidencia, requerimiento y, después, diseño y tareas.»
 3. Lee `docs/constitucion.md` si existe y **propón** (no escribas sin confirmar) cómo llenar la sección «Nuestro equipo» de `docs/kit/reglas.md`.
 4. Termina con la lista de archivos creados y una línea: «Para personalizar el kit, edite `docs/kit/reglas.md` y las plantillas de `docs/kit/plantillas/`.»
 5. Sugiere hacer commit: `git add docs/kit docs/specs && git commit -m "kit SDD"`.

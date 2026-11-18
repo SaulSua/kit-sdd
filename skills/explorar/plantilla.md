@@ -2,6 +2,7 @@
 
 > Lo que hace HOY el código, antes de cambiarlo. Hechos con archivo:línea; las suposiciones se marcan como tales.
 > Fecha: <fecha> · Explorado: <archivos o carpetas>
+> Para qué: <el cambio futuro que motivó la exploración>
 
 ## Qué hace
 
