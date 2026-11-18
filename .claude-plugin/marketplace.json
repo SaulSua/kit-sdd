@@ -1,0 +1,14 @@
+{
+  "name": "acendia-kit",
+  "description": "Kit de desarrollo guiado por especificación de Acendia para el taller de Claude Code.",
+  "owner": {
+    "name": "Acendia"
+  },
+  "plugins": [
+    {
+      "name": "sdd",
+      "source": "./",
+      "description": "Explorar, requerimiento y revisión. Una versión nueva por sesión del taller."
+    }
+  ]
+}
