@@ -1,5 +1,12 @@
 # Cambios
 
+## 0.6.0 · sesión 6 · Tareas y aprobación
+
+- Skill `tareas`: tareas chicas con su prueba primero, sus criterios, sus archivos y su punto de corte seguro; plan de pruebas desde los criterios; aprobación del paquete para construir.
+- `estado.md`: en qué paso va cada funcionalidad, quién aprobó qué y qué abre el paso siguiente. `requerimiento` y `diseno` lo actualizan.
+- Agente `revisor-coherencia`: cruza requerimiento, diseño y tareas (criterios sin tarea, tareas huérfanas, contradicciones, cambios silenciosos, constitución).
+- Caso trampa del `revisor-coherencia`.
+
 ## 0.5.0 · sesión 5 · Diseño técnico
 
 - Skill `diseno`: el diseño técnico desde el requerimiento aprobado (puerta de entrada), con alternativas, decisiones `D-n`, modelo de datos, contrato, trazabilidad de cada `CA-n`, amenazas, invariantes `INV-n` y chequeo de la constitución con excepciones justificadas.

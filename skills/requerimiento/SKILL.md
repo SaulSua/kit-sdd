@@ -88,6 +88,7 @@ Con su respuesta:
 
 - Si el revisor dijo LISTO o LISTO CON OBSERVACIONES, cambia el estado a `revisado` y anota el veredicto y la fecha en «Revisado por el agente».
 - **Nunca lo marques como aprobado:** la aprobación la firma una persona en la sección Estado (nombre y fecha).
+- Si existe `docs/specs/<NNN>/estado.md`, actualízalo (paso actual: requerimiento revisado). Si no existe y hay plantilla en `docs/kit/plantillas/estado.md`, créalo.
 - Reporta en pocas líneas y en lenguaje simple. **Nombre primero, ID al lado:** «falta el mensaje de rechazo (CA-3)», no «CA-3 incompleto».
   - dónde quedó el archivo;
   - cuántos criterios tiene;

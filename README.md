@@ -50,6 +50,7 @@ En la raíz de su repositorio:
 | 1. Explorar | `/sdd:explorar <funcionalidad>` | `docs/specs/001-<funcionalidad>/evidencia.md` |
 | 2. Requerimiento | `/sdd:requerimiento <funcionalidad>` | `docs/specs/001-<funcionalidad>/requerimiento.md`, revisado por un agente y listo para que lo apruebe una persona |
 | 3. Diseño técnico | `/sdd:diseno <funcionalidad>` | `diseno.md`: alternativas, decisiones, modelo de datos, contrato, amenazas, invariantes y chequeo de la constitución. **Empieza solo con el requerimiento aprobado** |
+| 4. Tareas | `/sdd:tareas <funcionalidad>` | `tareas.md` (tareas chicas, cada una con su prueba primero) y `estado.md`; revisión de coherencia y aprobación del paquete para construir |
 
 **Siempre activo:** el **guardián de datos** (un hook) bloquea, antes de que pase, la lectura de `.env`, llaves y credenciales, y la escritura de texto con C.I., números de cuenta o tarjetas.
 
@@ -78,6 +79,8 @@ Cada paso del método tiene dos piezas:
 | `diseno` | skill | Escribe el diseño técnico desde el requerimiento aprobado |
 | `arquitecto` | agente | Propone dos o tres alternativas, primero reusando lo que existe, y recomienda una |
 | `revisor-diseno` | agente | Revisa cobertura de criterios, decisiones, amenazas y la constitución como puerta |
+| `tareas` | skill | Divide el diseño en tareas con prueba primero, arma el plan de pruebas y el estado |
+| `revisor-coherencia` | agente | Cruza requerimiento, diseño y tareas: cobertura, contradicciones, cambios silenciosos |
 
 ## Reglas de diseño del kit
 
