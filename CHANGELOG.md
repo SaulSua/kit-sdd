@@ -1,5 +1,12 @@
 # Cambios
 
+## 1.0.0 · sesión 10 · Escalar: el kit del equipo
+
+- Skill `flujo`: el método completo encadenado. Lee el estado de cada funcionalidad, lo comprueba contra los documentos, dice qué abre el paso siguiente según el tamaño (chico, normal, grande) y ejecuta el skill que toca, sin saltar puertas.
+- Skill `leccion`: la memoria del equipo. Cada falla termina en una regla (en un solo lugar), un caso de prueba nuevo para el agente (regla de regresión) o nada.
+- `GRADUAR.md`: cómo llevar el kit a los repositorios del banco, activar el guardián sin plugin, adaptarlo y mantenerlo vivo.
+- README con los tamaños y las siete reglas de un buen agente.
+
 ## 0.9.0 · sesión 9 · Seguridad del código generado
 
 - Skill `seguridad`: revisión cruzada (quien construye no revisa), comprobación de cada crítico, registro en `seguridad.md` de qué se hizo con cada hallazgo, y borrador de guía de buenas prácticas para Seguridad de la Información.
