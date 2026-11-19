@@ -1,5 +1,12 @@
 # Cambios
 
+## 0.7.0 · sesión 7 · Implementar: TDD dentro de SDD
+
+- Skill `implementar`: tarea por tarea desde el paquete aprobado, en una rama; implementador → revisor de desvíos → la persona decide → commit chico; pull request al final.
+- Agente `implementador`: una sola tarea con TDD (rojo por la razón correcta, verde mínimo, suite completa). Nunca cambia una prueba para que pase, no toca archivos fuera de la tarea, máximo tres intentos, no decide lo que el diseño no dice.
+- Agente `revisor-desvios`: revisa el diff contra la tarea, el diseño y las reglas, y corre las pruebas.
+- Caso trampa del `revisor-desvios` (un diff con desvíos sembrados).
+
 ## 0.6.0 · sesión 6 · Tareas y aprobación
 
 - Skill `tareas`: tareas chicas con su prueba primero, sus criterios, sus archivos y su punto de corte seguro; plan de pruebas desde los criterios; aprobación del paquete para construir.

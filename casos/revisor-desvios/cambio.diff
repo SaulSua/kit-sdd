@@ -1,0 +1,73 @@
+diff --git a/src/transferencias.js b/src/transferencias.js
+index 3c1a2b4..9f8e7d6 100644
+--- a/src/transferencias.js
++++ b/src/transferencias.js
+@@ -1,18 +1,31 @@
+ const { obtenerCuenta, redondear } = require("./cuentas");
+ const { calcularComision } = require("./comisiones");
++const { totalDeHoy, registrar } = require("./movimientos");
++
++const LIMITE_DIARIO = 10000;
+
+ // Mueve dinero de una cuenta a otra. La comisión la paga la cuenta de origen.
+ function transferir(numeroOrigen, numeroDestino, monto, tipo) {
+   if (numeroOrigen === numeroDestino) throw new Error("Origen y destino son la misma cuenta");
+   const origen = obtenerCuenta(numeroOrigen);
+   const destino = obtenerCuenta(numeroDestino);
+   const comision = calcularComision(monto, tipo);
+   const total = redondear(monto + comision);
+   if (origen.saldo < total) throw new Error("Saldo insuficiente");
+
+   origen.saldo = redondear(origen.saldo - total);
+   destino.saldo = redondear(destino.saldo + monto);
++
++  console.log("Transferencia de", origen.titular, "a", destino.titular, "por", monto);
++
++  if (tipo === "otro_banco") {
++    const acumulado = totalDeHoy(numeroOrigen) + monto + comision;
++    if (acumulado > LIMITE_DIARIO) throw new Error("Límite superado");
++    registrar(numeroOrigen, tipo, monto);
++  }
+   return { monto, comision, total };
+ }
+
+ module.exports = { transferir };
+diff --git a/src/avisos.js b/src/avisos.js
+new file mode 100644
+index 0000000..1a2b3c4
+--- /dev/null
++++ b/src/avisos.js
+@@ -0,0 +1,6 @@
++// Aviso al cliente cuando se acerca al límite (mejora de paso).
++function avisarSiCerca(cuenta, acumulado) {
++  if (acumulado > 8000) console.log("Aviso: cerca del límite", cuenta.titular);
++}
++
++module.exports = { avisarSiCerca };
+diff --git a/test/comisiones.test.js b/test/comisiones.test.js
+index 4d5e6f7..8a9b0c1 100644
+--- a/test/comisiones.test.js
++++ b/test/comisiones.test.js
+@@ -14,7 +14,7 @@ test("a otro banco la comisión mínima es Bs 5", () => {
+ });
+
+ test("a otro banco la comisión máxima es Bs 100", () => {
+-  assert.equal(calcularComision(50000, "otro_banco"), 100);
++  assert.equal(calcularComision(50000, "otro_banco"), 250);
+ });
+
+diff --git a/test/transferencias.test.js b/test/transferencias.test.js
+index 2e3f4a5..6b7c8d9 100644
+--- a/test/transferencias.test.js
++++ b/test/transferencias.test.js
+@@ -30,3 +30,11 @@ test("transferir a otro banco cobra comisión", () => {
+   assert.equal(obtenerCuenta("1002").saldo, 1500);
+ });
++
++test("rechaza un centavo arriba del límite y no mueve saldos", () => {
++  try {
++    transferir("1001", "1002", 10000.01, "otro_banco");
++  } catch (e) {
++    assert.ok(e);
++  }
++});

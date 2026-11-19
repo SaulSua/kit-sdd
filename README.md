@@ -51,6 +51,7 @@ En la raíz de su repositorio:
 | 2. Requerimiento | `/sdd:requerimiento <funcionalidad>` | `docs/specs/001-<funcionalidad>/requerimiento.md`, revisado por un agente y listo para que lo apruebe una persona |
 | 3. Diseño técnico | `/sdd:diseno <funcionalidad>` | `diseno.md`: alternativas, decisiones, modelo de datos, contrato, amenazas, invariantes y chequeo de la constitución. **Empieza solo con el requerimiento aprobado** |
 | 4. Tareas | `/sdd:tareas <funcionalidad>` | `tareas.md` (tareas chicas, cada una con su prueba primero) y `estado.md`; revisión de coherencia y aprobación del paquete para construir |
+| 5. Implementar | `/sdd:implementar <funcionalidad> [T-n]` | Código tarea por tarea con TDD: la prueba falla primero, revisión de desvíos, commit chico por tarea, pull request al final |
 
 **Siempre activo:** el **guardián de datos** (un hook) bloquea, antes de que pase, la lectura de `.env`, llaves y credenciales, y la escritura de texto con C.I., números de cuenta o tarjetas.
 
@@ -81,6 +82,9 @@ Cada paso del método tiene dos piezas:
 | `revisor-diseno` | agente | Revisa cobertura de criterios, decisiones, amenazas y la constitución como puerta |
 | `tareas` | skill | Divide el diseño en tareas con prueba primero, arma el plan de pruebas y el estado |
 | `revisor-coherencia` | agente | Cruza requerimiento, diseño y tareas: cobertura, contradicciones, cambios silenciosos |
+| `implementar` | skill | Construye tarea por tarea con TDD, revisión y commit chico; prepara el PR |
+| `implementador` | agente | Hace una sola tarea: prueba que falla, código mínimo, suite en verde. Nunca cambia una prueba para que pase |
+| `revisor-desvios` | agente | Revisa el cambio contra la tarea y el diseño: archivos de más, pruebas tocadas, lógica no aprobada |
 
 ## Reglas de diseño del kit
 
