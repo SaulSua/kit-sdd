@@ -52,6 +52,8 @@ En la raíz de su repositorio:
 | 3. Diseño técnico | `/sdd:diseno <funcionalidad>` | `diseno.md`: alternativas, decisiones, modelo de datos, contrato, amenazas, invariantes y chequeo de la constitución. **Empieza solo con el requerimiento aprobado** |
 | 4. Tareas | `/sdd:tareas <funcionalidad>` | `tareas.md` (tareas chicas, cada una con su prueba primero) y `estado.md`; revisión de coherencia y aprobación del paquete para construir |
 | 5. Implementar | `/sdd:implementar <funcionalidad> [T-n]` | Código tarea por tarea con TDD: la prueba falla primero, revisión de desvíos, commit chico por tarea, pull request al final |
+| 6. Probar | `/sdd:pruebas <funcionalidad>` | Pruebas desde cada criterio, con bordes y errores, auditadas por un agente que busca pruebas débiles |
+| Cuando algo falla | `/sdd:depurar <error>` | Causa raíz con evidencia antes de tocar nada; después, el arreglo con la prueba primero |
 
 **Siempre activo:** el **guardián de datos** (un hook) bloquea, antes de que pase, la lectura de `.env`, llaves y credenciales, y la escritura de texto con C.I., números de cuenta o tarjetas.
 
@@ -85,6 +87,10 @@ Cada paso del método tiene dos piezas:
 | `implementar` | skill | Construye tarea por tarea con TDD, revisión y commit chico; prepara el PR |
 | `implementador` | agente | Hace una sola tarea: prueba que falla, código mínimo, suite en verde. Nunca cambia una prueba para que pase |
 | `revisor-desvios` | agente | Revisa el cambio contra la tarea y el diseño: archivos de más, pruebas tocadas, lógica no aprobada |
+| `pruebas` | skill | Arma la suite desde los criterios y la hace auditar |
+| `auditor-pruebas` | agente | Encuentra pruebas que pasarían con el código roto y propone mutaciones |
+| `depurar` | skill | Diagnóstico desde la causa y arreglo con TDD |
+| `depurador` | agente | Reproduce, descarta hipótesis con evidencia y devuelve la causa raíz. No arregla |
 
 ## Reglas de diseño del kit
 

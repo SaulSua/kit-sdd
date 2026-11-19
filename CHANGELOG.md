@@ -1,5 +1,12 @@
 # Cambios
 
+## 0.8.0 · sesión 8 · QA con IA
+
+- Skill `pruebas`: suite desde los criterios e invariantes, con bordes, errores, datos sintéticos y nombres con el criterio; pruebas de caracterización para código heredado; prueba de mutación con autorización.
+- Agente `auditor-pruebas`: diez patrones de pruebas débiles y mutaciones concretas para demostrarlas.
+- Skill `depurar` y agente `depurador`: reproducir, hipótesis descartadas con evidencia, causa raíz con archivo y línea; el arreglo después, con la prueba primero.
+- Caso trampa del `auditor-pruebas`. Prueba de punta a punta del `implementador` sobre `banco-practica`.
+
 ## 0.7.0 · sesión 7 · Implementar: TDD dentro de SDD
 
 - Skill `implementar`: tarea por tarea desde el paquete aprobado, en una rama; implementador → revisor de desvíos → la persona decide → commit chico; pull request al final.

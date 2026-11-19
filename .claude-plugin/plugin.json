@@ -1,6 +1,6 @@
 {
   "name": "sdd",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Kit de desarrollo guiado por especificación (SDD) de Acendia: explorar el código, escribir el requerimiento y revisarlo con un agente independiente. Crece una versión por sesión del taller.",
   "author": {
     "name": "Acendia"
