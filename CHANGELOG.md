@@ -1,5 +1,12 @@
 # Cambios
 
+## 0.5.0 · sesión 5 · Diseño técnico
+
+- Skill `diseno`: el diseño técnico desde el requerimiento aprobado (puerta de entrada), con alternativas, decisiones `D-n`, modelo de datos, contrato, trazabilidad de cada `CA-n`, amenazas, invariantes `INV-n` y chequeo de la constitución con excepciones justificadas.
+- Agente `arquitecto`: dos o tres alternativas reales, primero reusando lo que existe, con su comparación y una recomendación. La decisión es de la persona.
+- Agente `revisor-diseno`: la constitución como puerta, cobertura de criterios, cambios silenciosos del requerimiento, decisiones sin alternativas y seguridad por diseño.
+- Caso trampa del `revisor-diseno`, con su constitución y su requerimiento aprobado.
+
 ## 0.4.1 · corrección
 
 - Las descripciones de skills y agentes van entre comillas: con dos puntos adentro, el encabezado no se leía y los agentes perdían su lista de herramientas (solo lectura) y su modelo. Validado con `claude plugin validate`.
