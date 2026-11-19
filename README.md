@@ -13,11 +13,16 @@ En Claude Code, una sola vez:
 /plugin install sdd@acendia-kit
 ```
 
-Reinicie Claude Code. Para recibir la versión de cada sesión:
+Reinicie Claude Code. Para recibir la versión de cada sesión, desde una terminal (fuera de Claude Code):
 
 ```
-/plugin marketplace update acendia-kit
+claude plugin marketplace update acendia-kit
+claude plugin update sdd@acendia-kit
 ```
+
+Después, en su repositorio, `/sdd:iniciar` otra vez: copia las plantillas nuevas y no toca lo que ya personalizó.
+
+**Requisito:** Node.js 18 o superior (el guardián de datos es un programa en Node).
 
 **Sin plugins** (si la configuración de su organización no los permite): clone este repositorio y copie las carpetas a su proyecto.
 
@@ -30,6 +35,8 @@ cp kit-sdd/agents/* .claude/agents/
 
 Así los comandos se llaman sin el prefijo: `/requerimiento` en vez de `/sdd:requerimiento`.
 
+Sin plugin, el guardián de datos no se activa solo: copie `kit-sdd/hooks/guardian-datos.js` a `.claude/hooks/` y agregue a `.claude/settings.json` un hook `PreToolUse` con matcher `Read|Edit|Write|MultiEdit|NotebookEdit|Bash|PowerShell` y comando `node .claude/hooks/guardian-datos.js` (ver `hooks/hooks.json`).
+
 ## Usar
 
 En la raíz de su repositorio:
@@ -37,8 +44,13 @@ En la raíz de su repositorio:
 | Paso | Comando | Qué deja |
 |---|---|---|
 | Una vez por repositorio | `/sdd:iniciar` | `docs/kit/` (reglas y plantillas del equipo) y `docs/specs/` |
+| Una vez por repositorio | `/sdd:politica` | `docs/kit/politica-datos.md`, permisos en `.claude/settings.json`, borrador de configuración centralizada |
+| Una vez por repositorio | `/sdd:reglas` | `.claude/rules/<area>.md`: reglas por carpeta, propuestas desde su código y aprobadas por el equipo |
+| 0. Diagnosticar | `/sdd:entrada <pedido>` | `docs/specs/001-<nombre>/entrada.md`: tipo, evidencia (la prueba que falla si es bug), tamaño y camino |
 | 1. Explorar | `/sdd:explorar <funcionalidad>` | `docs/specs/001-<funcionalidad>/evidencia.md` |
 | 2. Requerimiento | `/sdd:requerimiento <funcionalidad>` | `docs/specs/001-<funcionalidad>/requerimiento.md`, revisado por un agente y listo para que lo apruebe una persona |
+
+**Siempre activo:** el **guardián de datos** (un hook) bloquea, antes de que pase, la lectura de `.env`, llaves y credenciales, y la escritura de texto con C.I., números de cuenta o tarjetas.
 
 Una funcionalidad, una carpeta numerada. Si la carpeta ya existe, el kit la reutiliza.
 
@@ -56,6 +68,12 @@ Cada paso del método tiene dos piezas:
 | `explorador` | agente | Lee el código heredado y documenta reglas escondidas, riesgos y preguntas para negocio |
 | `requerimiento` | skill | Entrevista una pregunta a la vez y redacta el requerimiento |
 | `revisor-requerimiento` | agente | Comprueba que cada criterio se pueda verificar y que no haya reglas sin decidir ni datos reales |
+| `entrada` | skill | Diagnostica el pedido: tipo, reproduce el bug, tamaño y camino |
+| `reglas` | skill | Escribe las reglas por carpeta en `.claude/rules/` con la aprobación del equipo |
+| `lector-de-reglas` | agente | Lee el código y propone las reglas que el equipo ya sigue, con evidencia |
+| `politica` | skill | Política de datos, permisos y borrador de configuración centralizada |
+| `revisor-politica` | agente | Revisa documentos y cambios contra la política de datos |
+| `guardian-datos` | hook | Bloquea secretos y datos de clientes antes de que el agente los lea o escriba |
 
 ## Reglas de diseño del kit
 

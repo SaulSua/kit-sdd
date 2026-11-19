@@ -1,5 +1,15 @@
 # Cambios
 
+## 0.4.0 · sesión 4 · Control y datos
+
+- Skill `entrada`: el paso 0. Clasifica el tipo de trabajo, reproduce el bug con una prueba que falla, propone el tamaño (chico, normal, grande) y el camino.
+- Skill `reglas` y agente `lector-de-reglas`: reglas del repositorio por carpeta en `.claude/rules/`, propuestas desde el código con evidencia y aprobadas por el equipo.
+- Skill `politica` y agente `revisor-politica`: política de datos, permisos en `.claude/settings.json` y borrador de configuración centralizada para Seguridad de la Información.
+- Hook `guardian-datos`: bloquea `.env`, llaves y credenciales, y texto con C.I., cuentas o tarjetas. Patrones propios en `docs/kit/datos-prohibidos.txt`.
+- `iniciar` copia también las plantillas nuevas y los archivos del guardián, sin pisar lo existente.
+- Casos de prueba: `entrada`, `lector-de-reglas`, `revisor-politica` (con instrucción inyectada) y 16 casos ejecutables del guardián.
+
+
 ## 0.3.0 · sesión 3 · Especificar: del pedido al requerimiento
 
 - Skill `iniciar`: prepara `docs/kit/` y `docs/specs/` en el repositorio.

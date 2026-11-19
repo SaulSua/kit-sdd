@@ -1,0 +1,7 @@
+# Rutas donde el guardián de datos NO revisa el contenido de lo que se escribe.
+# Úselo solo para datos sintéticos de prueba que el guardián confunde con datos reales.
+# Una ruta (o parte de una ruta) por línea. Las líneas con # son comentarios.
+# Ojo: los archivos de secretos (.env, llaves) se bloquean igual, estén donde estén.
+#
+# Ejemplo:
+# test/fixtures/

@@ -1,0 +1,21 @@
+{
+  "_borrador": "BORRADOR para Seguridad de la Información. No se aplica desde el repositorio: lo carga la administración de Claude de la organización (configuración centralizada de los planes Team y Enterprise). Revisar con Seguridad de la Información antes de aplicar.",
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Read(./**/*.pfx)",
+      "Read(./**/credentials*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(npm install:*)",
+      "WebFetch"
+    ],
+    "disableBypassPermissionsMode": "disable"
+  }
+}

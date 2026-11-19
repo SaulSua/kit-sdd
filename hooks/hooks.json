@@ -1,0 +1,17 @@
+{
+  "description": "Guardián de datos del kit SDD: bloquea archivos de secretos y texto con datos de clientes antes de que el agente los lea o los escriba.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|MultiEdit|NotebookEdit|Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/guardian-datos.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

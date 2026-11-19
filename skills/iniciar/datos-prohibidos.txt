@@ -1,0 +1,8 @@
+# Patrones propios del equipo para el guardián de datos del kit SDD.
+# Una expresión regular por línea (sin distinguir mayúsculas). Las líneas con # son comentarios.
+# Si el texto que el agente quiere escribir calza con alguna, el guardián lo bloquea.
+# El kit ya bloquea C.I., números de cuenta de 10 a 16 dígitos y tarjetas: aquí van los de su sistema.
+#
+# Ejemplos (quitar el # para activarlos):
+# \bCLI-\d{6}\b
+# \bNIT\s*:?\s*\d{7,12}\b
