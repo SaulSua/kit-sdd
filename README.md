@@ -53,6 +53,7 @@ En la raíz de su repositorio:
 | 4. Tareas | `/sdd:tareas <funcionalidad>` | `tareas.md` (tareas chicas, cada una con su prueba primero) y `estado.md`; revisión de coherencia y aprobación del paquete para construir |
 | 5. Implementar | `/sdd:implementar <funcionalidad> [T-n]` | Código tarea por tarea con TDD: la prueba falla primero, revisión de desvíos, commit chico por tarea, pull request al final |
 | 6. Probar | `/sdd:pruebas <funcionalidad>` | Pruebas desde cada criterio, con bordes y errores, auditadas por un agente que busca pruebas débiles |
+| 7. Seguridad | `/sdd:seguridad <funcionalidad o PR>` | Revisión del código generado como código de un tercero (OWASP + reglas del banco), en `seguridad.md`; borrador de guía para Seguridad de la Información |
 | Cuando algo falla | `/sdd:depurar <error>` | Causa raíz con evidencia antes de tocar nada; después, el arreglo con la prueba primero |
 
 **Siempre activo:** el **guardián de datos** (un hook) bloquea, antes de que pase, la lectura de `.env`, llaves y credenciales, y la escritura de texto con C.I., números de cuenta o tarjetas.
@@ -91,6 +92,8 @@ Cada paso del método tiene dos piezas:
 | `auditor-pruebas` | agente | Encuentra pruebas que pasarían con el código roto y propone mutaciones |
 | `depurar` | skill | Diagnóstico desde la causa y arreglo con TDD |
 | `depurador` | agente | Reproduce, descarta hipótesis con evidencia y devuelve la causa raíz. No arregla |
+| `seguridad` | skill | Revisión de seguridad cruzada y registro de qué se hizo con cada hallazgo |
+| `revisor-seguridad` | agente | OWASP Top 10 y API Security Top 10, dinero y concurrencia, dependencias inventadas, instrucciones inyectadas |
 
 ## Reglas de diseño del kit
 

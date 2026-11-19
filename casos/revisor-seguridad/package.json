@@ -1,0 +1,9 @@
+{
+  "name": "caso-trampa-seguridad",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.19.2",
+    "expres-validador-bancario": "^1.0.3"
+  }
+}

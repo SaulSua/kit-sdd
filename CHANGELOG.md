@@ -1,5 +1,11 @@
 # Cambios
 
+## 0.9.0 · sesión 9 · Seguridad del código generado
+
+- Skill `seguridad`: revisión cruzada (quien construye no revisa), comprobación de cada crítico, registro en `seguridad.md` de qué se hizo con cada hallazgo, y borrador de guía de buenas prácticas para Seguridad de la Información.
+- Agente `revisor-seguridad`: lista de control con OWASP Top 10 y OWASP API Security Top 10, más dinero y concurrencia, dependencias inexistentes o con nombre parecido, y contenido externo tratado como orden.
+- Caso trampa del `revisor-seguridad` (una API con vulnerabilidades sembradas y una dependencia inventada).
+
 ## 0.8.0 · sesión 8 · QA con IA
 
 - Skill `pruebas`: suite desde los criterios e invariantes, con bordes, errores, datos sintéticos y nombres con el criterio; pruebas de caracterización para código heredado; prueba de mutación con autorización.
