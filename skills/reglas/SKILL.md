@@ -1,6 +1,6 @@
 ---
 name: reglas
-description: Escribe las reglas del repositorio por carpeta (backend, frontend, pruebas, datos) en .claude/rules/, a partir de lo que el código ya hace. Manda al agente lector-de-reglas a proponerlas con evidencia, la persona las corrige y aprueba, y recién ahí se escriben. Cada archivo de reglas se carga solo cuando el agente trabaja en esas carpetas. Úsalo al empezar en un repositorio o cuando el agente se equivoca dos veces en lo mismo.
+description: "Escribe las reglas del repositorio por carpeta (backend, frontend, pruebas, datos) en .claude/rules/, a partir de lo que el código ya hace. Manda al agente lector-de-reglas a proponerlas con evidencia, la persona las corrige y aprueba, y recién ahí se escriben. Cada archivo de reglas se carga solo cuando el agente trabaja en esas carpetas. Úsalo al empezar en un repositorio o cuando el agente se equivoca dos veces en lo mismo."
 argument-hint: "[área opcional: backend, frontend, pruebas o datos]"
 ---
 

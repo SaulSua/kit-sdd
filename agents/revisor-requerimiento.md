@@ -1,6 +1,6 @@
 ---
 name: revisor-requerimiento
-description: Revisa un requerimiento (docs/specs/<funcionalidad>/requerimiento.md) de forma independiente, sin ver cómo se escribió, y dice si está listo para que una persona lo apruebe. Comprueba que cada criterio de aceptación se pueda verificar, que el alcance y lo que queda fuera estén claros, que no haya decisiones de negocio tomadas por la IA ni datos reales. Solo lee: nunca corrige el archivo.
+description: "Revisa un requerimiento (docs/specs/<funcionalidad>/requerimiento.md) de forma independiente, sin ver cómo se escribió, y dice si está listo para que una persona lo apruebe. Comprueba que cada criterio de aceptación se pueda verificar, que el alcance y lo que queda fuera estén claros, que no haya decisiones de negocio tomadas por la IA ni datos reales. Solo lee: nunca corrige el archivo."
 tools: Read, Grep, Glob
 model: sonnet
 ---

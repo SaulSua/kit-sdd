@@ -1,5 +1,9 @@
 # Cambios
 
+## 0.4.1 · corrección
+
+- Las descripciones de skills y agentes van entre comillas: con dos puntos adentro, el encabezado no se leía y los agentes perdían su lista de herramientas (solo lectura) y su modelo. Validado con `claude plugin validate`.
+
 ## 0.4.0 · sesión 4 · Control y datos
 
 - Skill `entrada`: el paso 0. Clasifica el tipo de trabajo, reproduce el bug con una prueba que falla, propone el tamaño (chico, normal, grande) y el camino.

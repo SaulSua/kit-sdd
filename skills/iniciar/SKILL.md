@@ -1,6 +1,6 @@
 ---
 name: iniciar
-description: Prepara un repositorio para usar el kit SDD. Crea docs/kit/ con las reglas del equipo, copias editables de las plantillas y los archivos del guardián de datos, y la carpeta docs/specs/. Úsalo una vez por repositorio, y otra vez después de actualizar el kit para recibir las plantillas nuevas (no pisa lo que ya existe).
+description: "Prepara un repositorio para usar el kit SDD. Crea docs/kit/ con las reglas del equipo, copias editables de las plantillas y los archivos del guardián de datos, y la carpeta docs/specs/. Úsalo una vez por repositorio, y otra vez después de actualizar el kit para recibir las plantillas nuevas (no pisa lo que ya existe)."
 ---
 
 # Iniciar el kit en este repositorio

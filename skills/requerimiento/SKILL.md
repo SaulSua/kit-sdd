@@ -1,6 +1,6 @@
 ---
 name: requerimiento
-description: Convierte un pedido en un requerimiento verificable. Entrevista a la persona una pregunta a la vez, redacta docs/specs/<NNN-funcionalidad>/requerimiento.md con criterios de aceptación Dado/Cuando/Entonces y lo hace revisar por el agente revisor-requerimiento antes de entregarlo para aprobación humana. Úsalo cuando alguien quiera construir o cambiar una funcionalidad y todavía no tenga requerimiento escrito.
+description: "Convierte un pedido en un requerimiento verificable. Entrevista a la persona una pregunta a la vez, redacta docs/specs/<NNN-funcionalidad>/requerimiento.md con criterios de aceptación Dado/Cuando/Entonces y lo hace revisar por el agente revisor-requerimiento antes de entregarlo para aprobación humana. Úsalo cuando alguien quiera construir o cambiar una funcionalidad y todavía no tenga requerimiento escrito."
 argument-hint: "[la funcionalidad en una frase]"
 ---
 

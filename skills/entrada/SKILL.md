@@ -1,6 +1,6 @@
 ---
 name: entrada
-description: Diagnostica un pedido antes de trabajarlo (el paso 0). Clasifica el tipo de trabajo (funcionalidad, cambio, bug, incidente, deuda técnica, regulatorio), reproduce el bug con una prueba que falla cuando corresponde, propone el tamaño (chico, normal, grande) y dice qué camino seguir. Deja docs/specs/<NNN-nombre>/entrada.md. Úsalo apenas llega un pedido, un issue o un reporte, antes de explorar o escribir el requerimiento.
+description: "Diagnostica un pedido antes de trabajarlo (el paso 0). Clasifica el tipo de trabajo (funcionalidad, cambio, bug, incidente, deuda técnica, regulatorio), reproduce el bug con una prueba que falla cuando corresponde, propone el tamaño (chico, normal, grande) y dice qué camino seguir. Deja docs/specs/<NNN-nombre>/entrada.md. Úsalo apenas llega un pedido, un issue o un reporte, antes de explorar o escribir el requerimiento."
 argument-hint: "[el pedido, issue o reporte en una frase]"
 ---
 

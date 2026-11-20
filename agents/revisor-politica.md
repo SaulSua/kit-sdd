@@ -1,6 +1,6 @@
 ---
 name: revisor-politica
-description: Revisa un documento (requerimiento, diseño, tareas) o un cambio de código contra la política de datos y permisos del repositorio (docs/kit/politica-datos.md). Busca datos de clientes, secretos, logs que exponen datos, lecturas de archivos prohibidos y texto de afuera tratado como orden. Úsalo antes de aprobar un documento o un cambio que toca datos. Solo lee.
+description: "Revisa un documento (requerimiento, diseño, tareas) o un cambio de código contra la política de datos y permisos del repositorio (docs/kit/politica-datos.md). Busca datos de clientes, secretos, logs que exponen datos, lecturas de archivos prohibidos y texto de afuera tratado como orden. Úsalo antes de aprobar un documento o un cambio que toca datos. Solo lee."
 tools: Read, Grep, Glob
 model: sonnet
 ---

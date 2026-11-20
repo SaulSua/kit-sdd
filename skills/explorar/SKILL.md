@@ -1,6 +1,6 @@
 ---
 name: explorar
-description: Explora el código que toca una funcionalidad (sobre todo código heredado) con el agente explorador y deja la evidencia escrita en docs/specs/<NNN-funcionalidad>/evidencia.md, con las reglas escondidas, los riesgos y las preguntas para negocio. Úsalo antes de escribir un requerimiento que cambia código existente. No modifica código.
+description: "Explora el código que toca una funcionalidad (sobre todo código heredado) con el agente explorador y deja la evidencia escrita en docs/specs/<NNN-funcionalidad>/evidencia.md, con las reglas escondidas, los riesgos y las preguntas para negocio. Úsalo antes de escribir un requerimiento que cambia código existente. No modifica código."
 argument-hint: "[funcionalidad o archivo a explorar]"
 ---
 

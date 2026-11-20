@@ -1,6 +1,6 @@
 ---
 name: lector-de-reglas
-description: Lee un repositorio y descubre las reglas que el equipo ya sigue sin haberlas escrito (estructura, nombres, cómo se manejan errores, montos, fechas, pruebas, acceso a datos), separadas por área (backend, frontend, pruebas, datos). Devuelve una propuesta de reglas por carpeta con la evidencia de cada una. Úsalo para escribir o actualizar las reglas del repositorio. Solo lee: nunca escribe las reglas.
+description: "Lee un repositorio y descubre las reglas que el equipo ya sigue sin haberlas escrito (estructura, nombres, cómo se manejan errores, montos, fechas, pruebas, acceso a datos), separadas por área (backend, frontend, pruebas, datos). Devuelve una propuesta de reglas por carpeta con la evidencia de cada una. Úsalo para escribir o actualizar las reglas del repositorio. Solo lee: nunca escribe las reglas."
 tools: Read, Grep, Glob
 model: sonnet
 ---

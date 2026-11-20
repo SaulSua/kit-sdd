@@ -1,6 +1,6 @@
 ---
 name: explorador
-description: Lee código existente (sobre todo código heredado sin pruebas) y documenta qué hace, qué reglas de negocio tiene escondidas y qué riesgos tiene, con archivo y línea. Úsalo antes de escribir un requerimiento que toca código que ya existe. Solo lee: nunca modifica nada.
+description: "Lee código existente (sobre todo código heredado sin pruebas) y documenta qué hace, qué reglas de negocio tiene escondidas y qué riesgos tiene, con archivo y línea. Úsalo antes de escribir un requerimiento que toca código que ya existe. Solo lee: nunca modifica nada."
 tools: Read, Grep, Glob
 model: sonnet
 ---

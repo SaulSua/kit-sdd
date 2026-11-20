@@ -1,6 +1,6 @@
 ---
 name: politica
-description: Escribe con el equipo la política de datos y permisos del repositorio: qué datos nunca entran a la IA, qué puede hacer el agente sin preguntar, qué tiene que preguntar y qué no puede hacer nunca. Deja docs/kit/politica-datos.md, los permisos en .claude/settings.json, los patrones del guardián de datos y un borrador de configuración centralizada para Seguridad de la Información. Úsalo una vez por repositorio y cuando cambie una regla de seguridad.
+description: "Escribe con el equipo la política de datos y permisos del repositorio: qué datos nunca entran a la IA, qué puede hacer el agente sin preguntar, qué tiene que preguntar y qué no puede hacer nunca. Deja docs/kit/politica-datos.md, los permisos en .claude/settings.json, los patrones del guardián de datos y un borrador de configuración centralizada para Seguridad de la Información. Úsalo una vez por repositorio y cuando cambie una regla de seguridad."
 ---
 
 # Control y datos: qué puede ver y hacer el agente
